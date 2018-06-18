@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Hier die Lebensdaten von #{title}
+  form(method='post', action="/hallo")
+    input(type='text', name='namen', value='Nauka')
+
+    input(type='date', name='geburtsdatum', value='17.12.1993')
+    div(class='abstand')
+    input(type="submit" value="submit")
+
+  h2 Ausgabe
+  div#seconds Leben in Sekunden #{birthday}
+  div#days Leben in Tagen #{days}
+  div#weeks Leben in Wochen #{weeks}
